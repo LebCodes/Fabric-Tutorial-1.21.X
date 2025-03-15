@@ -2,6 +2,7 @@ package net.lebcodes.tutorialmod;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.lebcodes.tutorialmod.block.ModBlocks;
 import net.lebcodes.tutorialmod.item.ModItemGroups;
 import net.lebcodes.tutorialmod.item.ModItems;
@@ -19,6 +20,10 @@ public class TutorialMod implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 
+		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 600);
+
+
+		//for all vanilla fuel burn times, press shift twice to search for AbstractFurnaceBlockEntity
 		//for all vanilla recipes, go to External Libraries -> minecraft-merged -> data -> minecraft -> recipe
 		//for all vanilla loot tables, go to External Libraries -> minecraft-merged -> data -> minecraft -> loot_table
 	}
