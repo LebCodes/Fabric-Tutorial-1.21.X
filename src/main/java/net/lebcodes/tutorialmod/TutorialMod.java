@@ -18,5 +18,8 @@ public class TutorialMod implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+
+		//for all vanilla recipes, go to External Libraries -> minecraft-merged -> data -> minecraft -> recipe
+		//for all vanilla loot tables, go to External Libraries -> minecraft-merged -> data -> minecraft -> loot_table
 	}
 }
