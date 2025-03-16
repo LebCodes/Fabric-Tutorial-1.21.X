@@ -1,6 +1,7 @@
 package net.lebcodes.tutorialmod.block.custom;
 
 import net.lebcodes.tutorialmod.item.ModItems;
+import net.lebcodes.tutorialmod.util.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
@@ -35,12 +36,17 @@ public class MagicBlock extends Block {
     @Override
     public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
         if(entity instanceof ItemEntity itemEnt) {
-            if(itemEnt.getStack().getItem() == ModItems.RAW_PINK_GARNET) {
+            if(isValidItem(itemEnt.getStack())) {
                 itemEnt.setStack(new ItemStack(Items.DIAMOND, itemEnt.getStack().getCount()));
             }
         }
 
         super.onSteppedOn(world, pos, state, entity);
+    }
+
+    //basically turns any item within this tag into diamonds
+    private boolean isValidItem(ItemStack stack) {
+        return stack.isIn(ModTags.Items.TRANSFORMABLE_ITEMS);
     }
 
     @Override
