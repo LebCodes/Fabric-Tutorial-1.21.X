@@ -2,11 +2,13 @@ package net.lebcodes.tutorialmod;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.lebcodes.tutorialmod.block.ModBlocks;
 import net.lebcodes.tutorialmod.component.ModDataComponentTypes;
 import net.lebcodes.tutorialmod.item.ModItemGroups;
 import net.lebcodes.tutorialmod.item.ModItems;
+import net.lebcodes.tutorialmod.util.HammerUsageEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,6 +26,8 @@ public class TutorialMod implements ModInitializer {
 		ModDataComponentTypes.registerDataComponentTypes();
 
 		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 600);
+
+		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 
 
 		//for all vanilla fuel burn times, press shift twice to search for AbstractFurnaceBlockEntity
