@@ -1,0 +1,8 @@
+{
+  "asset_id": "tutorialmod:lebsense",
+  "decal": false,
+  "description": {
+    "translate": "trim_pattern.tutorialmod.lebsense"
+  },
+  "template_item": "tutorialmod:lebsense_armor_trim_smithing_template"
+}

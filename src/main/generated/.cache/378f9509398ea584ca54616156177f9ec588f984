@@ -1,9 +1,9 @@
-// 1.21	2025-03-24T18:19:37.809432	Tutorial Mod/Block Loot Tables
+// 1.21	2025-04-03T08:56:03.4089	Tutorial Mod/Block Loot Tables
 e324243da1cda477b8f75c1cf06f408d17143f95 data/tutorialmod/loot_table/blocks/pink_garnet_wall.json
 c524d99e89d1a6b91131c503e69d1343642df802 data/tutorialmod/loot_table/blocks/raw_pink_garnet_block.json
 81e1cfbc4d86d3fd0189a0c8ea6ecf867f65d766 data/tutorialmod/loot_table/blocks/pink_garnet_ore.json
-a8a175045f0d3d679e9afac5111d25b6d0b78ab7 data/tutorialmod/loot_table/blocks/pink_garnet_deepslate_ore.json
 fdb21182d3115edeb12f16aa5d40f8aca9e17f9a data/tutorialmod/loot_table/blocks/pink_garnet_button.json
+a8a175045f0d3d679e9afac5111d25b6d0b78ab7 data/tutorialmod/loot_table/blocks/pink_garnet_deepslate_ore.json
 f9fed56792aac989521a48d25cde5a55d5973db4 data/tutorialmod/loot_table/blocks/pink_garnet_fence_gate.json
 20c1b94f16da89972e44952293dc87c35d46d12c data/tutorialmod/loot_table/blocks/pink_garnet_block.json
 cbb358d78cd57da58c907a35212d486fa6f68efa data/tutorialmod/loot_table/blocks/magic_block.json
