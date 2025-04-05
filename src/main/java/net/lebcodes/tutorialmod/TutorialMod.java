@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.lebcodes.tutorialmod.block.ModBlocks;
 import net.lebcodes.tutorialmod.component.ModDataComponentTypes;
+import net.lebcodes.tutorialmod.effect.ModEffects;
 import net.lebcodes.tutorialmod.item.ModItemGroups;
 import net.lebcodes.tutorialmod.item.ModItems;
 import net.lebcodes.tutorialmod.sound.ModSounds;
@@ -33,6 +34,8 @@ public class TutorialMod implements ModInitializer {
 
 		ModDataComponentTypes.registerDataComponentTypes();
 		ModSounds.registerSounds();
+
+		ModEffects.registerEffects();
 
 		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 600);
 
