@@ -69,6 +69,9 @@ public class ModItems {
     public static final Item LEBSENSE_SMITHING_TEMPLATE = registerItem("lebsense_armor_trim_smithing_template",
             SmithingTemplateItem.of(Identifier.of(TutorialMod.MOD_ID, "lebsense"), FeatureFlags.VANILLA));
 
+    public static final Item LEB_BOW = registerItem("leb_bow",
+            new BowItem(new Item.Settings().maxDamage(500)));
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(TutorialMod.MOD_ID, name), item);
     }

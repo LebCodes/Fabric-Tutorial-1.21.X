@@ -1,0 +1,6 @@
+{
+    "parent": "tutorialmod:item/leb_bow",
+    "textures": {
+        "layer0": "tutorialmod:item/leb_bow_pulling_1"
+    }
+}
