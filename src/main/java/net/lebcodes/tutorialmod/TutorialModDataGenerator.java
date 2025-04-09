@@ -6,6 +6,8 @@ import net.lebcodes.tutorialmod.datagen.*;
 import net.lebcodes.tutorialmod.enchantment.ModEnchantments;
 import net.lebcodes.tutorialmod.trim.ModTrimMaterials;
 import net.lebcodes.tutorialmod.trim.ModTrimPatterns;
+import net.lebcodes.tutorialmod.world.ModConfiguredFeatures;
+import net.lebcodes.tutorialmod.world.ModPlacedFeatures;
 import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKeys;
 
@@ -27,5 +29,8 @@ public class TutorialModDataGenerator implements DataGeneratorEntrypoint {
 		registryBuilder.addRegistry(RegistryKeys.TRIM_MATERIAL, ModTrimMaterials::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.TRIM_PATTERN, ModTrimPatterns::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.ENCHANTMENT, ModEnchantments::bootstrap);
+
+		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::bootStrap);
+		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootStrap);
 	}
 }

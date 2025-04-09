@@ -16,6 +16,7 @@ import net.lebcodes.tutorialmod.item.ModItems;
 import net.lebcodes.tutorialmod.potion.ModPotions;
 import net.lebcodes.tutorialmod.sound.ModSounds;
 import net.lebcodes.tutorialmod.util.HammerUsageEvent;
+import net.lebcodes.tutorialmod.world.gen.ModWorldGeneration;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.passive.SheepEntity;
@@ -44,6 +45,7 @@ public class TutorialMod implements ModInitializer {
 		ModPotions.registerPotions();
 
 		ModEnchantmentEffects.registerEnchantmentEffects();
+		ModWorldGeneration.generateModWorldGen();
 
 		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 600);
 
