@@ -85,6 +85,9 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                                 )
                 )
         );
+
+        addDrop(ModBlocks.PINK_GARNET_END_ORE, multipleOreDrops(ModBlocks.PINK_GARNET_END_ORE, ModItems.RAW_PINK_GARNET, 4, 9));
+        addDrop(ModBlocks.PINK_GARNET_NETHER_ORE, multipleOreDrops(ModBlocks.PINK_GARNET_NETHER_ORE, ModItems.RAW_PINK_GARNET, 3, 8));
     }
 
     //helper method for blocks with unique drops
