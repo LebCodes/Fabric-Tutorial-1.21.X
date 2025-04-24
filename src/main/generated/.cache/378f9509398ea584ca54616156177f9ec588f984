@@ -1,4 +1,4 @@
-// 1.21	2025-04-24T14:45:14.298066	Tutorial Mod/Block Loot Tables
+// 1.21	2025-04-24T15:00:28.05406	Tutorial Mod/Block Loot Tables
 633f1a0fb106fb43356695bc26b6a016da215c5e data/tutorialmod/loot_table/blocks/driftwood_leaves.json
 b711f0e282f5a9092528529ccf4af8999c209a52 data/tutorialmod/loot_table/blocks/driftwood_log.json
 e324243da1cda477b8f75c1cf06f408d17143f95 data/tutorialmod/loot_table/blocks/pink_garnet_wall.json
@@ -10,8 +10,8 @@ a8a175045f0d3d679e9afac5111d25b6d0b78ab7 data/tutorialmod/loot_table/blocks/pink
 fdb21182d3115edeb12f16aa5d40f8aca9e17f9a data/tutorialmod/loot_table/blocks/pink_garnet_button.json
 cbb358d78cd57da58c907a35212d486fa6f68efa data/tutorialmod/loot_table/blocks/magic_block.json
 940d49e1ad8940b0f97eab05f81d6734b7dc942f data/tutorialmod/loot_table/blocks/pink_garnet_fence.json
-574a89ee1b10a8e85c7f90b61a61c3dd6edeb638 data/tutorialmod/loot_table/blocks/pink_garnet_trapdoor.json
 1382e8045641fe6784d8535d113c80a6028a5ace data/tutorialmod/loot_table/blocks/pink_garnet_pressure_plate.json
+574a89ee1b10a8e85c7f90b61a61c3dd6edeb638 data/tutorialmod/loot_table/blocks/pink_garnet_trapdoor.json
 34646e01b75f06e8beb5c30eae861a280df32100 data/tutorialmod/loot_table/blocks/pink_garnet_nether_ore.json
 cac26981fc2b4bd6e1647508c45f83e277165f26 data/tutorialmod/loot_table/blocks/pink_garnet_end_ore.json
 2ff59f6f3052681e1c2d3abce365a01588a5fc34 data/tutorialmod/loot_table/blocks/driftwood_wood.json
