@@ -2,10 +2,7 @@ package net.lebcodes.tutorialmod.block;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.lebcodes.tutorialmod.TutorialMod;
-import net.lebcodes.tutorialmod.block.custom.CauliflowerCropBlock;
-import net.lebcodes.tutorialmod.block.custom.HoneyBerryBushBlock;
-import net.lebcodes.tutorialmod.block.custom.MagicBlock;
-import net.lebcodes.tutorialmod.block.custom.PinkGarnetLampBlock;
+import net.lebcodes.tutorialmod.block.custom.*;
 import net.lebcodes.tutorialmod.sound.ModSounds;
 import net.lebcodes.tutorialmod.world.tree.ModSaplingGenerators;
 import net.minecraft.block.*;
@@ -95,7 +92,7 @@ public class ModBlocks {
             new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)));
 
     public static final Block DRIFTWOOD_SAPLING = registerBlock("driftwood_sapling",
-            new SaplingBlock(ModSaplingGenerators.DRIFTWOOD, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
+            new ModSaplingBlock(ModSaplingGenerators.DRIFTWOOD, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING), Blocks.STONE));
 
     private static Block registerBlockWithoutBlockItem(String name, Block block) {
         return Registry.register(Registries.BLOCK, Identifier.of(TutorialMod.MOD_ID, name), block);
