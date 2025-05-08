@@ -4,11 +4,14 @@ import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.registry.*;
 import net.lebcodes.tutorialmod.block.ModBlocks;
 import net.lebcodes.tutorialmod.component.ModDataComponentTypes;
 import net.lebcodes.tutorialmod.effect.ModEffects;
 import net.lebcodes.tutorialmod.enchantment.ModEnchantmentEffects;
+import net.lebcodes.tutorialmod.entity.ModEntities;
+import net.lebcodes.tutorialmod.entity.custom.MantisEntity;
 import net.lebcodes.tutorialmod.item.ModItemGroups;
 import net.lebcodes.tutorialmod.item.ModItems;
 import net.lebcodes.tutorialmod.potion.ModPotions;
@@ -44,6 +47,8 @@ public class TutorialMod implements ModInitializer {
 
 		ModEnchantmentEffects.registerEnchantmentEffects();
 		ModWorldGeneration.generateModWorldGen();
+
+		ModEntities.registerModEntities();
 
 		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 600);
 
@@ -82,6 +87,8 @@ public class TutorialMod implements ModInitializer {
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_DRIFTWOOD_WOOD, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.DRIFTWOOD_PLANKS, 5, 20);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.DRIFTWOOD_LEAVES, 30, 60);
+
+		FabricDefaultAttributeRegistry.register(ModEntities.MANTIS, MantisEntity.createAttributes());
 
 
 		//for all vanilla fuel burn times, press shift twice to search for AbstractFurnaceBlockEntity

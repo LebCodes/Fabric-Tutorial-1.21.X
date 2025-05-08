@@ -3,6 +3,7 @@ package net.lebcodes.tutorialmod.item;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.lebcodes.tutorialmod.TutorialMod;
 import net.lebcodes.tutorialmod.block.ModBlocks;
+import net.lebcodes.tutorialmod.entity.ModEntities;
 import net.lebcodes.tutorialmod.item.custom.ChiselItem;
 import net.lebcodes.tutorialmod.item.custom.HammerItem;
 import net.lebcodes.tutorialmod.item.custom.ModArmorItem;
@@ -82,6 +83,9 @@ public class ModItems {
 
     public static final Item HONEY_BERRIES = registerItem("honey_berries",
             new AliasedBlockItem(ModBlocks.HONEY_BERRY_BUSH, new Item.Settings().food(ModFoodComponents.HONEY_BERRY)));
+
+    public static final Item MANTIS_SPAWN_EGG = registerItem("mantis_spawn_egg",
+            new SpawnEggItem(ModEntities.MANTIS, 0x9dc783, 0xbfaf5f, new Item.Settings()));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(TutorialMod.MOD_ID, name), item);
