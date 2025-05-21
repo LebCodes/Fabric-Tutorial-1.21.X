@@ -90,6 +90,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.DRIFTWOOD_LEAVES);
 
                         entries.add(ModBlocks.DRIFTWOOD_SAPLING);
+
+                        entries.add(ModBlocks.CHAIR);
                     }).build());
 
     public static void registerItemGroups() {
