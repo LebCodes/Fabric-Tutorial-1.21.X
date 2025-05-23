@@ -5,6 +5,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.fabricmc.fabric.api.registry.*;
 import net.lebcodes.tutorialmod.block.ModBlocks;
 import net.lebcodes.tutorialmod.component.ModDataComponentTypes;
@@ -22,10 +23,14 @@ import net.lebcodes.tutorialmod.world.gen.ModWorldGeneration;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.passive.SheepEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.potion.Potions;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
+import net.minecraft.village.TradeOffer;
+import net.minecraft.village.TradedItem;
+import net.minecraft.village.VillagerProfession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -91,6 +96,44 @@ public class TutorialMod implements ModInitializer {
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.DRIFTWOOD_LEAVES, 30, 60);
 
 		FabricDefaultAttributeRegistry.register(ModEntities.MANTIS, MantisEntity.createAttributes());
+
+		TradeOfferHelper.registerVillagerOffers(VillagerProfession.FARMER, 1, factories -> {
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 3),
+					new ItemStack(ModItems.CAULIFLOWER, 8), 7, 2, 0.04f));
+
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(Items.DIAMOND, 9),
+					new ItemStack(ModItems.CAULIFLOWER_SEEDS, 2), 3, 4, 0.04f));
+		});
+
+		TradeOfferHelper.registerVillagerOffers(VillagerProfession.FARMER, 2, factories -> {
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 3),
+					new ItemStack(ModItems.HONEY_BERRIES, 5), 4, 2, 0.04f));
+		});
+
+		TradeOfferHelper.registerVillagerOffers(ModVillagers.LEBENGER, 1, factories -> {
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 10),
+					new ItemStack(ModItems.CHISEL, 1), 4, 2, 0.04f));
+
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 16),
+					new ItemStack(ModItems.RAW_PINK_GARNET, 1), 4, 2, 0.04f));
+		});
+
+		TradeOfferHelper.registerVillagerOffers(ModVillagers.LEBENGER, 2, factories -> {
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 10),
+					new ItemStack(ModItems.CHISEL, 1), 4, 2, 0.04f));
+
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(ModItems.PINK_GARNET, 16),
+					new ItemStack(ModItems.TOMAHAWK, 1), 4, 12, 0.04f));
+		});
+
+
 
 
 		//for all vanilla fuel burn times, press shift twice to search for AbstractFurnaceBlockEntity
