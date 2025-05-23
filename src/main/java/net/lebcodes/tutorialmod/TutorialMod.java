@@ -17,6 +17,7 @@ import net.lebcodes.tutorialmod.item.ModItems;
 import net.lebcodes.tutorialmod.potion.ModPotions;
 import net.lebcodes.tutorialmod.sound.ModSounds;
 import net.lebcodes.tutorialmod.util.HammerUsageEvent;
+import net.lebcodes.tutorialmod.villager.ModVillagers;
 import net.lebcodes.tutorialmod.world.gen.ModWorldGeneration;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -49,6 +50,7 @@ public class TutorialMod implements ModInitializer {
 		ModWorldGeneration.generateModWorldGen();
 
 		ModEntities.registerModEntities();
+		ModVillagers.registerVillagers();
 
 		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 600);
 

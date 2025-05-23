@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "tutorialmod:leb_poi",
+      "required": false
+    }
+  ]
+}
