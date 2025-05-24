@@ -8,6 +8,7 @@ import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRe
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.fabricmc.fabric.api.registry.*;
 import net.lebcodes.tutorialmod.block.ModBlocks;
+import net.lebcodes.tutorialmod.block.entity.ModBlockEntities;
 import net.lebcodes.tutorialmod.component.ModDataComponentTypes;
 import net.lebcodes.tutorialmod.effect.ModEffects;
 import net.lebcodes.tutorialmod.enchantment.ModEnchantmentEffects;
@@ -61,6 +62,8 @@ public class TutorialMod implements ModInitializer {
 
 		ModParticles.registerParticles();
 		ModLootTableModifiers.modifyLootTables();
+
+		ModBlockEntities.registerBlockEntities();
 
 		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 600);
 
