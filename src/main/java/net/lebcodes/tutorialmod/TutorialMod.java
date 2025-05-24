@@ -15,6 +15,7 @@ import net.lebcodes.tutorialmod.entity.ModEntities;
 import net.lebcodes.tutorialmod.entity.custom.MantisEntity;
 import net.lebcodes.tutorialmod.item.ModItemGroups;
 import net.lebcodes.tutorialmod.item.ModItems;
+import net.lebcodes.tutorialmod.particle.ModParticles;
 import net.lebcodes.tutorialmod.potion.ModPotions;
 import net.lebcodes.tutorialmod.sound.ModSounds;
 import net.lebcodes.tutorialmod.util.HammerUsageEvent;
@@ -56,6 +57,8 @@ public class TutorialMod implements ModInitializer {
 
 		ModEntities.registerModEntities();
 		ModVillagers.registerVillagers();
+
+		ModParticles.registerParticles();
 
 		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 600);
 
