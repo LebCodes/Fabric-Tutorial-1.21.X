@@ -12,7 +12,10 @@ import net.lebcodes.tutorialmod.entity.ModEntities;
 import net.lebcodes.tutorialmod.entity.client.*;
 import net.lebcodes.tutorialmod.particle.ModParticles;
 import net.lebcodes.tutorialmod.particle.PinkGarnetParticle;
+import net.lebcodes.tutorialmod.screen.ModScreenHandlers;
+import net.lebcodes.tutorialmod.screen.custom.PedestalScreen;
 import net.lebcodes.tutorialmod.util.ModModelPredicates;
+import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 
@@ -40,5 +43,6 @@ public class TutorialModClient implements ClientModInitializer {
         ParticleFactoryRegistry.getInstance().register(ModParticles.PINK_GARNET_PARTICLE, PinkGarnetParticle.Factory::new);
 
         BlockEntityRendererFactories.register(ModBlockEntities.PEDESTAL_BE,  PedestalBlockEntityRenderer::new);
+        HandledScreens.register(ModScreenHandlers.PEDESTAL_SCREEN_HANDLER, PedestalScreen::new);
     }
 }
